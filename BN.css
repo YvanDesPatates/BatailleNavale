@@ -1,0 +1,262 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5vh;
+	background-color: blanchedalmond;
+}
+
+header > span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 95vh;
+	background-color: lightblue;
+}
+
+#t1Bateau {
+	width: 70%;
+	height: 70vh;
+}
+
+#t2Bateau {
+	width: 70%;
+	height: 70vh;
+	display: none;
+}
+
+#tImage {
+	width: 70%;
+	height: 70vh;
+	display: none;
+}
+
+#rmBateau{
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: indianred;
+	position: absolute;
+	left : 55px;
+	bottom: 35px;
+}
+
+#switch {
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: indianred;
+	position: absolute;
+	right: 55px;
+	bottom: 35px;
+	z-index: 1;
+}
+
+#switch:hover {
+	background-color: darkred;
+}
+
+#switchImg{
+	width: 80px;
+	height: 60px;
+}
+
+#carre_tournant{
+	width: 120px;
+	height: 120px;
+	border: solid;
+	border-color: darkred;
+	border-width: 5px;
+	background-color: transparent;
+	position: absolute;
+	right: 31px;
+	bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#carre_tournant{
+	animation-name: rotation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-play-state: paused;
+}
+
+.ligne{
+	display: flex;
+	border: solid;
+	width: 100%;
+	height: 10%;
+	background-color: transparent;
+}
+
+.cellule {
+	width: 10%;
+	height: 100%;
+	border : solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cellule:hover {
+	background-color: blueviolet;
+}
+
+#imgEntre2 {
+	width: 100%;
+	height: 100%;
+}
+
+/*bateaux à placer en début de game*/
+#infoBateau{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	background-color: blanchedalmond;
+	margin-top: 2vw;
+	padding: 5px;
+}
+
+#bateauETtableau{
+	width : 100vw;
+	height: 100vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.b1,.b2,.b3,.b4{
+	border: solid;
+	height: 5vw;
+}
+
+.b1:hover,.b2:hover,.b3:hover,.b4:hover{
+	position: relative;
+	left: 5px;
+}
+
+#b1{
+	background-color: rgb(186, 214, 241);
+	width: 5vw;
+	height: 5*2%;
+}
+.b1place{
+	background-color: rgba(186, 214, 241, 0.6);
+}
+
+#b2{
+	background-color: rgb(243, 178, 204);
+	width: 5%;
+	height: 4*2%;
+}
+.b2place{
+	background-color: rgba(243, 178, 204, 0.6);
+}
+
+#b3{
+	background-color: rgb(240, 213, 185);
+	width: 5%;
+	height: 5*3%;
+}
+.b3place{
+	background-color: rgba(240, 213, 185, 0.6);
+}
+
+#b4{
+	background-color: rgb(195, 213, 168);
+	width: 5%;
+	height: 5*4%;
+}
+.b4place{
+	background-color: rgba(195, 213, 168, 0.6);
+}
+
+#boite_victoire{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 99vh;
+	width: 99vw;
+	z-index: -1;
+}
+
+#affichage_victoire{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid;
+	height: 30%;
+	width: 60%;
+	background-color: blanchedalmond;
+	z-index: 2;
+}
+
+.confetti{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 97%;
+	height: 97%;
+}
+
+
+/*création animation carré_tournant*/
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(180deg);}
+}
+
+
+
+
+
+/*------------------------------fond qui bouge ---------------------------------------------------------------*/
+body {
+  background: #fff;
+}
+
+.ligne {
+  animation: scroll 70s linear infinite;
+  background: url("https://images.unsplash.com/photo-1510261729814-8ced5ae7c40d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"), #111111;
+  min-width: 360px;
+}
+
+@keyframes scroll {
+   100%{
+    background-position:0px 3000px;
+  }
+}
+
+#conf1{
+	 animation: scroll 30s linear infinite;
+  background: url("https://www.pngmart.com/files/5/Confetti-PNG-Photos.png"), #111111;
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 360px;
+
+  z-index: 1;
+}
+
+#conf2{
+	 animation: scroll 20s linear infinite;
+  background: url("https://www.pngmart.com/files/5/Confetti-PNG-Photos.png"), #111111;
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 360px;
+  left: 13px;
+  z-index: 3;
+}
+
+}
+
