@@ -3,7 +3,7 @@
 Jeux fonctionnel de bataille navale en tour par tour sur un seul écran.
 
 Les algos sont fait 100% en javascript (avec la bibliothèque Jquerry) à des fin d'entraînements.
-Le jeux est jouables mais améliorable en confort de jeux et en visuel.
+Le jeux est jouable mais améliorable en confort de jeux et en visuel.
 
 > <ins> quelques idées d'améliorations : </ins>
 > - mettre un compteur de bateaux adverses restants à toucher
